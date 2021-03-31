@@ -1,0 +1,33 @@
+.Navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: #20232A;
+  border-bottom: 1.5px solid #61DAFB ;
+  z-index: 2;
+}
+
+.Navigation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-bottom: 1.5px solid #61DAFB ;
+  background: #20232A;
+  z-index: 2;
+}
+
+.NavigationContainer {
+  max-width: 1260px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,22 @@
+.ContactPerson {
+  width: 100%;
+  height: 50px;
+  margin: 10px;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 1px solid #3498db;
+  transition: all 0.25s ease-in;
+  cursor: pointer;
+}
+
+.ContactPerson:hover {
+  border-color: #3498db;
+  color: #3498db;
+  box-shadow: 0 0.5em 0.5em -0.4em #3498db;
+  transform: translateY(-0.25em);
+}
+
+.currentPerson {
+  color: #3498db;
+}

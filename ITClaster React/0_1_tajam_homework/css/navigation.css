@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.header-line {
+  height: 1px;
+  width: 75px;
+  background: #00e0d0;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 10px 30px;
+  background: transparent;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #fff;
+  border: 1px solid #00e0d0;
+}
+
+.btn-primary:hover {
+  color: #00e0d0;
+  background: rgba(0, 224, 208, 0.1);
+}
+
+.btn-dark {
+  display: inline-block;
+  padding: 10px 30px;
+  background: transparent;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #302853;
+  border: 1px solid #302853;
+}
+
+.btn-dark:hover {
+  border-color: #00e0d0;
+  color: #00e0d0;
+  background: rgba(0, 224, 208, 0.1);
+}
+
+.overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(50, 32, 85, 0.8);
+  font-weight: 400;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #302853;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00e0d0;
+}

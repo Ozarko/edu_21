@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post One</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/utilities.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body id="home">
+    <header class="hero blog">
+      <div class="navbar" id="navbar">
+        <h1 class="logo">
+          <span class="text-primary"><i class="fas fa-book-open"></i> Edge</span
+          >Lender
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#cases">Cases</a></li>
+            <li><a href="index.html#blog">Blog</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="content">
+        <h1>Blog</h1>
+      </div>
+    </header>
+    <main>
+      <section class="post">
+        <h2>Blog Post One</h2>
+        <p class="meta">
+          <i class="fas fa-user">Posted by <strong>Nazar Oz</strong></i> |
+          October 28 2020
+        </p>
+        <img src="/img/blog/blog1.jpg" alt="blog">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia minima ipsa nemo beatae eaque dolorum mollitia architecto distinctio totam animi perferendis, eos eum aliquam illum est, esse, atque expedita excepturi?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident saepe modi sequi sunt earum? Voluptatibus incidunt facere pariatur sit minima nulla veniam, non iusto ea blanditiis id sunt sint magnam earum, magni vel vero modi impedit sapiente, unde totam dolores corporis quod. Tenetur, velit fuga! Iure pariatur minima dolore qui, id accusantium doloremque consequuntur rerum quos dolorum? Eveniet, placeat necessitatibus?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos iste laborum, aliquam modi hic quis veritatis commodi facilis cum, dolorum reiciendis, nesciunt dolore neque blanditiis. Accusamus eaque soluta corporis, fuga blanditiis velit! Aspernatur asperiores nihil delectus nemo, ullam, non provident tempora ut necessitatibus qui natus earum ipsum autem nisi rem?</p>
+      </section>
+    </main>
+    <footer class="footer bg-dark">
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+      </div>
+      <p>Copyright &copy; 2020 - EdgeLedger</p>
+    </footer>
+    <script>
+    const navbar = document.getElementById('navbar');
+    let scrolled = false;
+    window.onscroll = function() {
+      if(window.pageYOffset > 100) {
+        navbar.classList.remove('top');
+        if(!scrolled) {
+          navbar.style.transform = 'translateY(-70px)';
+        }
+        setTimeout(function() {
+          navbar.style.transform = 'translateY(0)';
+          scrolled = true;
+        }, 200);
+      } else {
+        navbar.classList.add('top');
+        scrolled = false;
+      }
+    }
+  </script>
+  </body>
+</html>

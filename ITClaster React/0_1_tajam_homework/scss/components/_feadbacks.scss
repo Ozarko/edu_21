@@ -1,0 +1,100 @@
+&__feadbacks {
+  height: 100%;
+  position: relative;
+  padding: 10px;
+  background: url(../img/feadbacks/team_bg.png) no-repeat center center/cover;
+  @include flex(center,space-between);
+  flex-direction: column;
+  &-quotes {
+    @include font(Playfair, 11rem, 700);
+    color: #fff;
+    z-index: 1;
+  }
+  &-slider {
+    position: relative;
+    height: 350px;
+    width: 100%;
+    max-width: 800px;
+    z-index: 1;
+
+    &-slide {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+      transform: scale(0);
+      transition: all 0.8s ease;
+      &.active {
+        transform: scale(1);
+      }
+
+      &-coment {
+        @include font(Playfair, 1.3rem, 400);
+        color: #ffffff;
+        line-height: 2.6rem;
+      }
+      &-name {
+        margin-top: 40px;
+        @include font(Roboto, 1.4rem, 900);
+        line-height: 2.2rem;
+        letter-spacing: 1px;
+        color: #fff;
+        text-transform: uppercase;
+      }
+      &-position {
+        @include font(Roboto, 1rem, 300);
+        color: #fff;
+        text-transform: uppercase;
+      }
+    }
+    @media screen and (min-width: $breakpoint-sm) {
+      height: 250px;
+      &-coment {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  &-slidebox {
+    margin: 30px 0;
+    @include flex(center,space-between);
+    width: 100%;
+    max-width: 600px;
+    z-index: 1;
+    &-customers {
+      @include flex(normal, space-evenly);
+      width: 100%;
+      &-customer {
+        width: 50px;
+        height: 50px;
+        transition: all 0.6s ease;
+        & > img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        &:hover {
+          transform: scale(1.2);
+        }
+        &.active {
+          transform: scale(1.3);
+        }
+      }
+    }
+    &-chevron {
+      display: block;
+      font-size: 30px;
+      background: none;
+      outline: 0;
+      border: 0;
+      cursor: pointer;
+      & > i {
+        color: #fff;
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+  }
+}

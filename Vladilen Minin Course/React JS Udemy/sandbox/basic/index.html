@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <style>
+    .car {
+      display: inline-block;
+      border: 2px solid #333;
+      padding: 15px;
+      box-shadow: 0 2px 10px #5c5c5c;
+      width: 150px;
+      text-align: center;
+      margin-left: 10px;
+    }
+  </style>
+  <body>
+    <!-- <div class="car">
+      <h3>Ford Focus</h3>
+      <p>Year: <strong>2019</strong></p>
+    </div>
+    <div class="car">
+      <h3>Audi a8</h3>
+      <p>Year: <strong>2015</strong></p>
+    </div>
+    <div class="car">
+      <h3>Mazda 3</h3>
+      <p>Year: <strong>2010</strong></p>
+    </div> -->
+
+    <div id="root"></div>
+    <script type="text/babel">
+      function Car(props) {
+        return (
+          <div className ='car'>
+            <h3>{props.name}</h3>
+            <p>
+              Year: <strong>{props.year}</strong>
+            </p>
+            <small>This is car</small>
+          </div>
+        );
+      }
+
+      const App = (
+        <div>
+          <Car name="Ford Focus" year="2019" />
+          <Car name="Audi a8" year="2015" />
+          <Car name="Mazda 3" year="2009" />
+        </div>
+      )
+    
+      ReactDOM.render(
+        App,
+        document.querySelector('#root')
+      )
+    </script>
+    <!--
+      Note: this page is a great way to try React but it's not suitable for production.
+      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
+
+      Read this section for a production-ready setup with JSX:
+      https://reactjs.org/docs/add-react-to-a-website.html#add-jsx-to-a-project
+
+      In a larger project, you can use an integrated toolchain that includes JSX instead:
+      https://reactjs.org/docs/create-a-new-react-app.html
+
+      You can also use React without JSX, in which case you can remove Babel:
+      https://reactjs.org/docs/react-without-jsx.html
+    -->
+  </body>
+</html>

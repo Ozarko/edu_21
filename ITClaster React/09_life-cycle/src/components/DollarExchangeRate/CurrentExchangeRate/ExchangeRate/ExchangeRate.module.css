@@ -1,0 +1,44 @@
+.ExchangeRate {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-color: #00FFFF;
+  color: #fff1e6;
+  box-shadow: 0 0.5em 0.5em -0.4em #00FFFF;
+  transform: translateY(-0.25em);
+  cursor: pointer;
+}
+
+.ExchangeRate:hover {
+  box-shadow: 2px 2px 1em #00FFFF;
+}
+
+.ExchangeRate >  h2 {
+  font-size: 50px;
+}
+
+.ExchangeRateIcon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 20px;
+}
+
+.ExchangeRateIcon > small {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.up {
+  color: #2a9d8f;
+}
+
+.down {
+  color: #e76f51;
+}
+

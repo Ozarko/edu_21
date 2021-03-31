@@ -1,0 +1,70 @@
+.ReactAnimationLogo {
+  margin-top: 100px;
+  width: 233px;
+  height: 233px;
+  position: relative;
+  perspective: 50000px;
+  color: #61DAFB;
+  mix-blend-mode: hard-light;
+}
+
+.ReactAnimationLogo span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 18.4%;
+  height: 18.4%;
+  border-radius: 100%;
+  background: currentColor;
+}
+
+.ReactAnimationLogo div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-left: 13.32px solid;
+  border-right: 5.1230769231px solid;
+  border-top: 13.32px solid transparent;
+  border-radius: 100%;
+}
+
+.ReactAnimationLogo div:nth-child(1) {
+  animation: anim-1 3s linear infinite;
+}
+
+.ReactAnimationLogo div:nth-child(2) {
+  animation: anim-2 3s linear infinite;
+}
+
+.ReactAnimationLogo div:nth-child(3) {
+  animation: anim-3 3s linear infinite;
+}
+
+@keyframes anim-1 {
+  from {
+    transform: rotateZ(120deg) rotateX(66deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(120deg) rotateX(66deg) rotateZ(360deg);
+  }
+}
+
+@keyframes anim-2 {
+  from {
+    transform: rotateZ(240deg) rotateX(66deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(240deg) rotateX(66deg) rotateZ(360deg);
+  }
+}
+
+@keyframes anim-3 {
+  from {
+    transform: rotateZ(360deg) rotateX(66deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg) rotateX(66deg) rotateZ(360deg);
+  }
+}

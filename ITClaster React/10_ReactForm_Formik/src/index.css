@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Space Mono';
+  src: local('Space Mono Regular'), local('Space-Mono-Regular'),
+      url('./components/UI/fonts/SpaceMono-Regular.woff2') format('woff2'),
+      url('./components/UI/fonts/SpaceMono-Regular.woff') format('woff'),
+      url('./components/UI/fonts/SpaceMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Space Mono', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

@@ -1,0 +1,58 @@
+.MenuLink {
+  position: relative;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 2px;
+  transition: all 0.25s ease;
+  border: none;
+}
+
+.MenuLink:hover {
+  color: #00FFFF;
+}
+
+.MenuLink::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+
+.MenuLink:hover:after {
+  opacity: 1;
+  color: #00FFFF;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.ActiveLink {
+  color: #00FFFF;
+  transition: all 0.25s ease-in;
+}
+
+.ActiveLink::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 1;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}

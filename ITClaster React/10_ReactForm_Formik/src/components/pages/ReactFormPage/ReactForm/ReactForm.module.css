@@ -1,0 +1,20 @@
+.ReactForm {
+  max-width: 700px;
+  width: 700px;
+  height: 600px;
+  padding: 50px;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  border-color: #00FFFF;
+  color: #fff1e6;
+  box-shadow: 0 0.5em 0.5em -0.4em #00FFFF;
+  transform: translateY(-0.25em);
+}
+
+.ReactForm > h2 {
+  font-size: 25px;
+  margin-bottom: 40px;
+}

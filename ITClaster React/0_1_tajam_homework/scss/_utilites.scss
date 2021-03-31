@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+// RESET
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+// Color
+
+$main-color: #00e0d0;
+$secondary-color: #302853;
+$btn-overley-color: rgba(0, 224, 208, 0.1);
+$box-overley-color: rgba(50, 32, 85, 0.8);
+$form-error-color: #e74c3c;
+
+// width and height
+
+$menu-height: 80px;
+
+// brakpoints
+
+$breakpoint-lg: 1200px;
+$breakpoint-md: 1024px;
+$breakpoint-sm: 768px;
+$breakpoint-sm-landscape: 500px;
+
+// utilites
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.header-line {
+  height: 1px;
+  width: 75px;
+  background: $main-color;
+}
+
+.btn {
+  &-primary {
+    display: inline-block;
+    padding: 10px 30px;
+    background: transparent;
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #fff;
+    border: 1px solid $main-color;
+    &:hover {
+      color: $main-color;
+      background: $btn-overley-color;
+    }
+  }
+  &-dark {
+    display: inline-block;
+    padding: 10px 30px;
+    background: transparent;
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $secondary-color;
+    border: 1px solid $secondary-color;
+    &:hover {
+      border-color: $main-color;
+      color: $main-color;
+      background: $btn-overley-color;
+    }
+  }
+}
+
+.overlay {
+  &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: $box-overley-color;
+      font-weight: 400;
+  }
+}
+
+// Custom Scrollbar
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+	background: $secondary-color;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $main-color;
+}
+
+// Mixin
+
+@mixin flex($aline, $justify) {
+  display: flex;
+  align-items: $aline;
+  justify-content: $justify;
+}
+
+@mixin grid($repeat, $fr) {
+  display: grid;
+  grid-template-columns: repeat($repeat, $fr+fr);
+}
+
+@mixin font($fontFamily, $fontSize, $fontWeight) {
+  @if($fontFamily == Roboto) {
+    font-family: 'Roboto', sans-serif;
+  }@else if($fontFamily == Playfair) {
+    font-family: 'Playfair Display', serif;
+  }@else{
+    font-family: 'Hammersmith One', sans-serif;
+  }
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+}

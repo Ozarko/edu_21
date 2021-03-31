@@ -1,0 +1,35 @@
+
+.DolarExchangeRate {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #202B33;
+  font-family: "Open Sans";
+  font-size: 16px;
+  color: #D3D3D3;
+  overflow: hidden;
+  text-align: center;
+}
+
+.DolarExchangeRateContainer {
+  max-width: 1200px;
+  width: 100%;
+  padding: 30px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-color: #00FFFF;
+  color: #fff1e6;
+  box-shadow: 0 0.5em 0.5em -0.4em #00FFFF;
+  transform: translateY(-0.25em);
+}
+
+.DolarExchangeRateContainer > h1 {
+  font-size: 40px;
+  margin: 25px;
+}

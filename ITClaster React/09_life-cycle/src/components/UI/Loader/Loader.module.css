@@ -1,0 +1,50 @@
+.LoaderParent {
+  position: relative;
+  background: #0d1b2a;
+}
+
+.Loader, 
+.Loader::before, 
+.Loader::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.Loader {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  color: #3498db;
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 1px #3498db;
+  transform: rotate(45deg);
+}
+
+.Loader > div {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-35deg);
+}
+
+.Loader::before, 
+.Loader::after {
+  content: '';
+  z-index: -1;
+  margin: -5%;
+  box-shadow: inset 0 0 0 2px;
+  border-radius: 6px;
+  animation: clipIt 8s linear infinite;
+}
+.Loader::before {
+  animation-delay: -4s;
+}
+
+@keyframes clipIt {
+  0%, 100% { clip: rect(0px, 220px, 2px, 0px); }
+  25%      { clip: rect(0px, 2px, 220px, 0px); }
+  50%      { clip: rect(218px, 220px, 220px, 0px); }
+  75%      { clip: rect(0px, 220px, 220px, 218px); }
+}

@@ -1,0 +1,226 @@
+&__footer {
+  position: relative;
+  background: url(../img/footer_bg.png) no-repeat center center/cover;
+  padding: 50px 10px;
+
+  &-box {
+    @include flex(center, normal);
+    flex-direction: column;
+    z-index: 1;
+    &-description {
+      padding: 20px;
+      z-index: 1;
+      &-logo {
+        @include flex(center, normal);
+        & > img {
+          max-width: 44px;
+          max-height: 50px;
+        }
+        & > h2 {
+          color: $main-color;
+          font-size: 3rem;
+          font-weight: 250;
+          margin-left: 10px;
+        }
+      }
+      & > p {
+        @include font(Roboto, 1.4rem, 300);
+        line-height: 2.4rem;
+        color: #fff;
+        margin-top: 20px;
+      }
+    }
+    &-contact {
+      padding: 20px;
+      z-index: 1;
+      & > h3 {
+        @include font(Roboto, 1.5rem, 900);
+        letter-spacing: 1px;
+        line-height: 2.6rem;
+        color: #fff;
+      }
+      &-address {
+        margin-top: 30px;
+        @include flex(center, normal);
+        z-index: 1;
+        cursor: pointer;
+        & > i {
+          font-size: 2rem;
+          color: #fff;
+        }
+        &:hover > i {
+          color: $main-color;
+        }
+        & > h2 {
+          @include font(Roboto, 1.4rem, 300);
+          line-height: 2.6rem;
+          color: #fff;
+          margin-left: 10px;
+        }
+      }
+      &-phone {
+        @include flex(center, normal);
+        & > i {
+          font-size: 2rem;
+          color: #fff;
+        }
+        &:hover > i {
+          color: $main-color;
+        }
+        & > a {
+          @include font(Roboto, 1.4rem, 300);
+          line-height: 2.6rem;
+          color: #fff;
+          margin-left: 10px;
+          margin-top: 10px;
+        }
+      }
+    }
+    &-conection {
+      width: 100%;
+      padding: 20px;
+      z-index: 1;
+      @include flex(center, normal);
+      flex-direction: column;
+      & > h3 {
+        @include font(Roboto, 1.5rem, 900);
+        letter-spacing: 1px;
+        line-height: 2.6rem;
+        color: #fff;
+      }
+      &-sub {
+        margin-top: 32px;
+        display: flex;
+        width: 100%;
+        &-btn,
+        &-mail {
+          display: inline-block;
+          background: transparent;
+          border: 1px solid #fff;
+          padding: 15px;
+          @include font(Roboto, 1.4rem, 300);
+          letter-spacing: 1px;
+          line-height: 2.6rem;
+          color: #fff;
+          transition: all 0.5s ease;
+          outline: none;
+          &:hover {
+            border-color: $main-color;
+            color: $main-color;
+            background: $btn-overley-color;
+          }
+        }
+        &-btn {
+          flex: 1;
+        }
+        &-mail {
+          text-align: center;
+          width: 70px;
+          margin-left: 10px;
+          font-size: 3rem;
+          background-color: rgba(50, 32, 85, 0.9);
+        }
+      }
+    }
+    &-social {
+      @include flex(center, space-between);
+      margin-top: 20px;
+      width: 100%;
+      &-item {
+        margin-right: 10px;
+        @include flex(center, center);
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        transition: all 0.5s ease;
+        &:last-child {
+          margin: 0;
+        }
+        & a i {
+          color: #fff;
+          font-size: 1.6rem;
+          transition: all 0.5s ease;
+        }
+        &:hover {
+          border-color: $main-color;
+          color: $main-color;
+          background: $btn-overley-color;
+          & a i {
+            color: $main-color;
+          }
+        }
+        @media screen and(min-width: $breakpoint-sm)  {
+            width: 50px;
+            height: 50px;
+            & a i {
+              font-size: 2rem;
+            }
+          }
+      }
+    }
+    @media screen and (min-width: $breakpoint-sm) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      &-description {
+        flex: 1;
+      }
+      &-contact {
+        flex: 1;
+      }
+    }
+    @media screen and(min-width: $breakpoint-md) {
+      &-description {
+        flex: 1;
+      }
+      &-contact {
+        flex: 1;
+      }
+      &-conection {
+        flex: 1;
+        align-items: flex-start;
+      }
+    }
+  }
+  &-docs {
+    width: 100%;
+    padding: 20px;
+    @include flex(center, space-between);
+    flex-direction: column;
+    z-index: 2;
+    &-box {
+      width: 100%;
+      max-width: 350px;
+      @include flex(normal, space-between);
+      z-index: 2;
+      text-transform: uppercase;
+      & > a {
+        @include font(Roboto, 1.4rem, 400);
+        letter-spacing: 0px;
+        line-height: 26px;
+        color: #ffffff;
+        cursor: pointer;
+        z-index: 2;
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+    &-copyright {
+      margin-top: 20px;
+      @include font(Roboto, 1.4rem, 400);
+      letter-spacing: 0px;
+      line-height: 26px;
+      color: #ffffff;
+      text-align: right;
+      z-index: 1;
+    }
+    @media screen and(min-width: $breakpoint-sm) {
+      flex-direction: row;
+      &-copyright {
+        margin-top: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.MainPage {
+  width: 100vw;
+  height: 100vh;
+  background: #202B33;
+
+  background-size: 400% 400%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.MainPage > h2 {
+  font-size: 70px;
+}

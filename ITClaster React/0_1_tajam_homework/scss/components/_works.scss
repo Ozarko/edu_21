@@ -1,0 +1,56 @@
+&__works {
+  height: 100%;
+  @include flex(center, normal);
+  flex-direction: column;
+  padding: 60px 10px;
+  &-description {
+    text-align: center;
+    & > h2 {
+      @include font(Playfair, 2.2rem, 700);
+      color: #413d4b;
+    }
+    & > a {
+      display: block;
+      margin: 10px 0 50px;
+      @include font(Roboto, 1.4rem, 400);
+      color: #413d4b;
+      letter-spacing: 1px;
+      transition: color 0.5s ease;
+      &:hover {
+        color: $main-color;
+      }
+    }
+  }
+  &-box {
+    @include flex(center, center);
+    flex-direction: column;
+    & > img {
+      max-width: 80%;
+      height: 250px;
+      object-fit: cover;
+      margin-bottom: 25px;
+      border: 1px solid $main-color;
+      transition: all 0.7s ease;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    @media screen and(min-width: $breakpoint-sm) {
+      @include grid(2,1);
+      grid-gap: 20px;
+      & > img {
+        margin-bottom: 0;
+        max-width: 370px;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+    @media screen and (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  &-btn {
+    margin-top: 50px;
+  }
+}

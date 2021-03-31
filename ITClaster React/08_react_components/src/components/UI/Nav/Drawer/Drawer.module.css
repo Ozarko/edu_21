@@ -1,0 +1,38 @@
+.Drawer  {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 60px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #20232A;
+  color: fff;
+}
+
+.Drawer  > ul {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.Drawer  > ul > li {
+  margin: 0 10px;
+}
+
+.Drawer  > ul > li > a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.Drawer ul li a:hover,
+.linkActive {
+  color: #61DAFB !important;
+}

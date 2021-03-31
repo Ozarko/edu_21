@@ -1,0 +1,9 @@
+.MenuList {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  z-index: 2;
+}

@@ -1,0 +1,16 @@
+.UserStatus {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.active {
+  background: chartreuse !important;
+}
+
+.disabled {
+  background: crimson !important;
+}

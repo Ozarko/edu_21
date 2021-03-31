@@ -1,0 +1,9 @@
+.CurrentExhangeRate {
+  padding: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+}
+

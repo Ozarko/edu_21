@@ -1,0 +1,7 @@
+.NavLogo > a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #61DAFB;
+}

@@ -1,0 +1,13 @@
+@import '../scss/utilites';
+
+.tajem{
+  @import 'components/navigation';
+  @import 'components/showcase';
+  @import 'components/about';
+  @import 'components/expertise';
+  @import 'components/team';
+  @import 'components/works';
+  @import 'components/feadbacks';
+  @import 'components/contact';
+  @import 'components/footer';
+}

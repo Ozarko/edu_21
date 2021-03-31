@@ -1,0 +1,39 @@
+.CompliteRegistration {
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.CompliteRegistration h2 {
+  color: floralwhite;
+  text-align: center;
+}
+
+.CompliteRegistration button {
+  width: 400px;
+  margin-top: 50px;
+  align-self: center;
+  display: inline-block;
+  background: transparent;
+  border: none;
+  padding: 10px 20px;
+  box-shadow: 0 0 5px #03e9f4;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: 4px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.CompliteRegistration button:hover {
+  transform: translateY(-5px);
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 20px #03e9f4
+}

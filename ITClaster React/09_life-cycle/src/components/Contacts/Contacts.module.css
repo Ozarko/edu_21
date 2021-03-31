@@ -1,0 +1,25 @@
+.Contacts {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #202B33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ContactBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  max-width: 1200px;
+  width: 100%;
+  max-height: 700px;
+  height: 100%;
+  border: 1px solid #2A3444;
+  border-color: #3498db;
+  color: #fff1e6;
+  box-shadow: 0 0.5em 0.5em -0.4em #3498db;
+  transform: translateY(-0.25em);
+}

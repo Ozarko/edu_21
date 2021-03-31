@@ -1,0 +1,169 @@
+@import '../utilites';
+
+&__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $menu-height;
+  transition: all 0.3s ease;
+  padding: 10px 20px;
+  z-index: 2;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-bottom: 1px solid $main-color;
+    background: $secondary-color;
+    z-index: 2;
+  }
+  &-box {
+    width: 100%;
+    height: 100%;
+    @include flex(center, space-between);
+    &-logo {
+      @include flex(center, normal);
+      cursor: pointer;
+      z-index: 3;
+      & > img {
+        height: 50px;
+        width: 44px;
+      }
+      & > h2 {
+        color: $main-color;
+        font-size: 3rem;
+        font-weight: 250;
+        margin-left: 10px;
+      }
+    }
+
+    &-btn {
+      position: relative;
+      width: 40px;
+      height: 25px;
+      background: none;
+      border: 0;
+      outline: none;
+      cursor: pointer;
+      z-index: 3;
+      &-line {
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        transition: all 0.7s ease;
+        &.line1 {
+          top: 0;
+        }
+        &.line2 {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        &.line3 {
+          bottom: 0;
+        }
+      }
+      &.active .tajem__nav-box-btn-line {
+        background: $main-color;
+        &.line1 {
+          transform: rotate(45deg);
+          top: 50%;
+        }
+        &.line2 {
+          transform: rotate(225deg);
+          left: 0;
+        }
+        &.line3 {
+          transform: rotate(-45deg);
+          top: 50%;
+        }
+      }
+      @media screen and (min-width: $breakpoint-md) {
+        display: none;
+      }
+    }
+
+    &-menu {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @include flex(center, space-evenly);
+      flex-direction: column;
+      text-align: center;
+      padding: $menu-height 0;
+      clip-path: circle(100px at 90% -10%);
+      transition: all 0.9s ease-in-out;
+      &.active {
+        top: 0;
+        bottom: 0;
+        clip-path: circle(1500px at 90% -10%);
+        background: $secondary-color;
+      }
+      &-item {
+        &-link {
+          color: #fff;
+          font-size: 1.5rem;
+          font-weight: 900;
+          transition: color 0.6s ease;
+          &:hover {
+            color: $main-color;
+          }
+        }
+      }
+      @media screen and (max-height: $breakpoint-sm-landscape) {
+        @include grid(4, 1);
+        padding-top: $menu-height;
+      }
+      @media screen and (min-width: $breakpoint-sm) {
+        &-item-link {
+          font-size: 2rem;
+        }
+      }
+      @media screen and (min-width: $breakpoint-md) {
+        position: static;
+        width: auto;
+        z-index: 3;
+        clip-path: 0;
+        flex-direction: row;
+        justify-content: space-between;
+        clip-path: none;
+        transition: none;
+        padding: 0;
+        &-item {
+          margin-left: 10px;
+          &-link {
+            font-size: 1.3rem;
+          }
+          @media screen and (min-width: $breakpoint-lg) {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+  &.top {
+    &::before {
+      background: transparent;
+      @media screen and (min-width: $breakpoint-md) {
+        border: 0;
+      }
+    }
+    .tajem__nav-box-menu {
+      &.active {
+        @media screen and (min-width: $breakpoint-md) {
+          background: none;
+        }
+      }
+    }
+  }
+}
