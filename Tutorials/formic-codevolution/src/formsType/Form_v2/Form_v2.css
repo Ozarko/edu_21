@@ -1,0 +1,33 @@
+.Form_v2 {
+  width: 60%;
+  height: 60%;
+  border-radius: 20px;
+  background: rgb(119, 119, 119);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Form_v2 > input {
+  width: 70%;
+  height: 30px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.Form_v2 > input:focus, 
+.Form_v2 > input:active {
+  outline: none;
+}
+
+textarea {
+  width: 70%;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.error {
+  color: red;
+}
