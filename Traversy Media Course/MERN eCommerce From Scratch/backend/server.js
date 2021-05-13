@@ -5,6 +5,8 @@ import colors from 'colors'
 import productRoutes from './routes/productRoutes.js'
 import userRoutes from "./routes/userRoutes.js";
 import { errorHandler, notFound } from './middelware/errorMiddelware.js'
+import orderRoutes from './routes/orderRoutes.js'
+
 const app = express()
 app.use(express.json());
 dotenv.config()
@@ -16,6 +18,7 @@ app.get('/', (req,res)=> {
 })
 app.use("/api/products", productRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/orders", orderRoutes);
 app.use(notFound)
 app.use(errorHandler);
 
