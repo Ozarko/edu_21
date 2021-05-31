@@ -1,0 +1,23 @@
+{
+  "name": "node-vladilen",
+  "version": "1.0.0",
+  "description": "Node JS Course for youtube",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "node",
+    "node",
+    "js"
+  ],
+  "author": "Nazar Ozarko <ozarkonv@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
