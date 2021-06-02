@@ -63,7 +63,6 @@ const server = http.createServer((req, res) => {
         }
       });
     }else{
-      console.log(contentType)
       res.writeHead(200, {
         "Content-Type": contentType,
       });
