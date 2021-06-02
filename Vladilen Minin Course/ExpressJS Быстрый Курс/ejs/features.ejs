@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<%- include('./partials/head') %>
+<html lang="en">
+  <body>
+    <%- include('./partials/navbar') %>
+    <div class="container">
+      <h1>Features page</h1>
+      <div id="app">
+        <form @submit.prevent='createServer'>
+          <div class="mb-3">
+            <input type="text" class="form-control" v-model='name' >
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div class="spinner-border" role="status" v-if="servers.length === 0">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <ul class="list-group" v-else >
+          <li class="list-group-item" v-for='server in servers' @click="remove(server.id)">
+            {{server.name}}
+            <strong>{{server.status}}</strong>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
