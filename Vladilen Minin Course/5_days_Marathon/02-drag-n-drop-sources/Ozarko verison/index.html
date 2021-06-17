@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ozarko Drag and Drop Version</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <div class="table">
+      <div class="table-task">
+        <div class="table-task-header">
+          <h1>Be the best !</h1>
+          <div class='separator'></div>
+        </div>
+        <form class='change-title-form form' id="change-title-form">
+          <h3 class="form-title">Change title</h3>
+          <div class='change-title-form-body'>
+            <div class="form-controll">
+              <input id='new-board-title' class="form-input" type="text" maxlength="14" placeholder=" " required />
+              <label class="form-label">Set new title.</label>
+            </div>
+          </div>
+          <button class="form-submit" type="submit">
+            Set board title
+            <i class="fas fa-space-shuttle"></i>
+          </button>
+        </form>
+        <form class='add-task-form form' id="add-task-form form">
+          <h3 class="form-title">Add tasks</h3>
+          <div class="add-task-form-body">
+            <div class="form-controll">
+              <input id='new-task-text' class="form-input" type="text" maxlength="30" placeholder=" " required />
+              <label class="form-label">Set new title.</label>
+            </div>
+            <div class="form-controll">
+              <select class="form-select" name="prioryty" id="select-prioryty" required>
+                <option></option>
+                <option value="#2A9D8F">Low priority</option>
+                <option value="#E9C46A">Normal priority</option>
+                <option value="#F4A261">High priority</option>
+                <option value="#E76F51">Highest priority</option>
+              </select>
+              <label class="form-label">Set new title.</label>
+            </div>
+          </div>
+            <button class="form-submit" type="submit">
+              Add new task
+            <i class="fas fa-space-shuttle"></i>
+          </button>
+        </form>
+      </div>
+      <div class="table-board">
+        <div class="table-board-header">
+          <h2 id="board-title">New Board</h2>
+          <div class='separator'></div>
+        </div>
+        <div class="table-board-body">
+          <div class="table-board-body-step">
+            <div class="table-board-body-step-item">
+              Backlog
+              <span class="count">1</span>
+            </div>
+            <div class="table-board-body-step-item">
+              Planning
+              <span class="count">2</span>
+            </div>
+            <div class="table-board-body-step-item">
+              Doing
+              <span class="count">3</span>
+            </div>
+            <div class="table-board-body-step-item">
+                Done
+                <span class="count">4</span>
+            </div>
+          </div>
+          <div class="table-board-body-position">
+            <div class="table-board-body-position-item" id="backlog-position">
+              <div class='separator'></div>
+            </div>
+            <div class="table-board-body-position-item" id="planning-position">
+                        <div class='separator'></div>
+            </div>
+            <div class="table-board-body-position-item" id="doing-position"><div class='separator'></div></div>
+            <div class="table-board-body-position-item" id="done-position"><div class='separator'></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+
+</html>
